@@ -17,7 +17,12 @@ const UploadForm = () => {
     return (
         <div>
             <form action="">
-                <input type="file" onChange={handleUpload} />
+                <label >
+
+                    <input type="file" onChange={handleUpload} />
+                    <span>+</span>
+                </label>
+
 
                 <div className="output">
                     {
