@@ -4,6 +4,7 @@ import 'firebase/firestore';
 var firebaseConfig = {
     apiKey: "AIzaSyBRYix9yAV7h7vLwhI7wUrMZHXctyJx_5Q",
     authDomain: "nahid-photo.firebaseapp.com",
+    databaseURL: "https://nahid-photo.firebaseio.com",
     projectId: "nahid-photo",
     storageBucket: "nahid-photo.appspot.com",
     messagingSenderId: "1000955934751",
@@ -14,5 +15,5 @@ firebase.initializeApp(firebaseConfig);
 
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
-
-export { projectStorage, projectFirestore };
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+export { projectStorage, projectFirestore, timestamp };
